@@ -1,0 +1,17 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
+pyttsx3
+scikit-learn
+nltk
+pygame
+python-vlc
+opencv-python
+numpy
+pytesseract
+yt-dlp
+pyowm
+bs4
+requests
+SpeechRecognition
+easyocr
+
+

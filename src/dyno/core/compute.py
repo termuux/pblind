@@ -20,6 +20,7 @@ class Compute:
 
     def execute(self):
         stream = dyno.utils.speechtt.SpeechText().reco_input()
+        print(stream)
         ext = self.determiner.extract(stream)
 
         if ext:

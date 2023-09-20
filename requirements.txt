@@ -13,5 +13,5 @@ bs4
 requests
 SpeechRecognition
 easyocr
-
-
+pyaudio
+vosk

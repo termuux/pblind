@@ -13,7 +13,7 @@ class SpeechText:
         self.capture = pyaudio.PyAudio()
         self.model = Model('src/dyno/assets/model')
         self.recognizer = KaldiRecognizer(self.model, 16000)
-        self.stream = self.capture.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8192 ) 
+        self.stream = self.capture.open(format=pyaudio.paInt16, channels=2, rate=16000, input=True, frames_per_buffer=8192 ) 
         self.stream.start_stream()
 
     def reco_input(self, active=False):
@@ -37,6 +37,7 @@ class SpeechText:
             stream_in = stream.split()
             for match in dyno.helper:
                 if set(stream_in).intersection([match]):
+                    print(match)
                     return [True,match]
             return [False,None]
         else:
